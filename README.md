@@ -1,5 +1,5 @@
 # Seva
-Wanderlust is a MERN stack project inspired by Airbnb, providing a platform for users to browse and book vacation rentals. This project is hosted on Render and can be accessed here. https://seva-eb3t.onrender.com
+Seva is a web app connecting food donors with recipients. Donors list extra food, and recipients can request items based on their needs. A search feature aids quick filtering, and the project is built with MVC architecture, deployed on Render.com.. https://seva-eb3t.onrender.com
 
 ![Screenshot 2024-08-10 113206](https://github.com/user-attachments/assets/a15b5fd0-6307-42bf-b5f1-4785397304b6)
 
@@ -8,14 +8,15 @@ Wanderlust is a MERN stack project inspired by Airbnb, providing a platform for 
 
 ![Screenshot 2024-08-10 113328](https://github.com/user-attachments/assets/9b17bf8f-ca00-4ace-ba31-85027bb0ef33)
 ## Description
-Wanderlust is a full-stack web application developed using the MERN stack (MongoDB, Express.js, React, and Node.js). Inspired by Airbnb, Wanderlust allows users to search for vacation rentals, view property details, and make bookings. This project demonstrates a comprehensive understanding of web development, including both front-end and back-end technologies.
+The Seva project is a web platform designed to simplify food donation and distribution. Users can list surplus food they wish to donate, while those in need can browse available listings and make requests based on specific needs. A search feature helps users find food items quickly by type or requirement. Built with MVC architecture for organized code structure, Seva is deployed on Render.com for easy online access.
 ## Features
 
-- User authentication and authorization  
-- Browse and search for vacation rentals  
-- View detailed property descriptions and images  
-- Book properties for selected dates  
-- Responsive design
+- **Food Donation**: Donors can list surplus food on the platform with details like food type, quantity, and location.
+- **Food Requesting**: Users in need of food can browse listings and send requests directly to donors, detailing their requirements.
+- **Search Functionality**: A search bar enables users to filter food listings based on specific requirements, making it easier to find relevant items.
+- **User Authentication & Authorization**: Managed via Passport for secure login and access control.
+- **MVC Architecture**: The project is built using the MVC structure for better code organization and maintainability.
+- **Deployment**: Hosted on Render.com for easy online access.
 
 ## Tech Stack
 
@@ -31,7 +32,7 @@ Wanderlust is a full-stack web application developed using the MERN stack (Mongo
 
     ```bash
     git clone https://github.com/ashutosht123/Wanderlust.git
-    cd wanderlust
+    cd Seva
     ```
 
 2. **Install dependencies:**
@@ -95,6 +96,6 @@ Wanderlust is a full-stack web application developed using the MERN stack (Mongo
 
 - Visit the [live demo](https://seva-eb3t.onrender.com) to explore the application.  
 - Register or log in to your account.  
-- Browse and search for vacation rentals.  
-- View detailed information about properties.  
-- Book a property for your desired dates.
+- Browse and search for available food.  
+- View detailed information about doneted food.  
+- Request a food according to your needs.
