@@ -8,12 +8,17 @@
       <h3 class="listing-details"><%= listing.title %></h3>
         <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="Lsiting_image">
         <div class="card-body">
-          <p class="card-text"><i> Owned by <%= listing.owner.username %></i></p>
-          <p class="card-text"><%= listing.description %></p>
-          <p class="card-text"> &#8377; <%= listing.price.toLocaleString("en-IN") %></p>
-          <p class="card-text"><%= listing.location %> </p>
-          <p class="card-text"><%= listing.country %></p>
+          <p class="card-text"><i> Doneted by <%= listing.owner.username %></i></p>
+          <p class="card-text">Food Type: <%= listing.country %></p>
+          <p class="card-text">Category: <%= listing.category %></p>
+          <p class="card-text">Quantity: <%= listing.price.toLocaleString("en-IN") %> Peoples can eat</p>
+          <p class="card-text">Phone: <%= listing.contact %></p>
+          <p class="card-text">Address: <%= listing.description %></p>
+          <p class="card-text">Location: <%= listing.location %> </p>
         </div>
+        <% if(currUser) { %>
+            <button class="btn-request"><i class="fa-solid fa-code-pull-request"><a href="/listings/<%= listing._id %>/request">&nbsp; </i>Request Food</a></button>
+        <% } %>
       </div>
     <% if(currUser && listing.owner._id.equals(currUser._id)) { %>
     <div class="btns">

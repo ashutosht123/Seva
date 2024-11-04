@@ -1,0 +1,21 @@
+<% layout("/layouts/boilerplate") %>
+<% layout("/layouts/boilerplate") %>
+<div class="row new-row">
+     <div class="col-6 offset-3">
+        <form action="/listings/<%= listing._id %>" method="post" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="yourName" class="form-label">Your Name</label>
+                 <input type="text" name="yourName" id="yourName"  class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="yourEmail" class="form-label">Email</label>
+                 <input type="email" name="yourEmail" id="yourEmail"  class="form-control" required>
+              </div>
+              <Div class="mb-3">
+                <label for="yourMsg" class="form-label">Meassage For Doner (optional)</label>
+                <textarea class="form-control" name="yourMsg" id="yourMsg"  type="text" name=""></textarea>
+             </Div>
+              <button type="submit" class="btn-request"><i class="fa-solid fa-paper-plane"></i>&nbsp;Send Request</button>
+        </form>
+     </div>
+</div>

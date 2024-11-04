@@ -6,7 +6,7 @@ const expressError=require("./utils/expressError.js")
 module.exports.isLogedIn=(req,res,next)=>{
     if(!req.isAuthenticated()){
         req.session.redirectUrl=req.originalUrl
-        req.flash("error","You must be loged in to create listing")
+        req.flash("error","You must be loged in to donate Food")
         return res.redirect("/login")
     }
     next()
@@ -24,7 +24,7 @@ module.exports.isOwner= async(req,res,next)=>{
      let listing= await Listing.findById(id)
 
      if(! listing.owner.equals(res.locals.currUser._id)){
-        req.flash("error","You are not the owner of this listings")
+        req.flash("error","You are not the doner of this Food")
         return res.redirect(`/listings/${id}`)
      }
      next()

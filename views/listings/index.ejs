@@ -42,12 +42,12 @@
 <body>
   <div id="filters">
     <div class="filter">
-    <h1>All Listings</h1>
+    <h1>Available Food</h1>
     </div>
     <div class="tax-toggle">
       <div class="form-check-reverse form-switch">
         <input class="form-check-input input-lg" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-        <label class="form-check-label" for="flexSwitchCheckDefault">Display Total After Taxes</label>
+        <label class="form-check-label" for="flexSwitchCheckDefault">Display Food Type (V/N)</label>
       </div>
     </div>
   </div>
@@ -59,11 +59,14 @@
                 <div class="card-img-overlay"></div>
                 <div class="card-body">
                   <p class="card-text">
-                    <b><%= listing.title %></b> <br>
-                    &#8377;<%= listing.price.toLocaleString("en-IN") %>/night
-                    <i class="tax-info">&nbsp;&nbsp; +18% GST</i>
+                      <b><%= listing.title %></b>
+                      <% if (listing.country === "veg") { %>
+                        &nbsp;&nbsp;<img class="tax-info" height="30px" width="30px" src="https://i.pinimg.com/736x/e4/1f/f3/e41ff3b10a26b097602560180fb91a62.jpg" alt="">
+                      <% } else { %>
+                        &nbsp;&nbsp;<img class="tax-info" height="30px" width="30px" src="https://cdn.vectorstock.com/i/1000v/00/43/non-vegetarian-sign-veg-logo-symbol-vector-50890043.jpg" alt="">
+                      <% } %>
                   </p>
-                </div>
+              </div>              
               </a>
               </div>
               <% } %>

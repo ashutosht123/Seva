@@ -5,12 +5,73 @@ body{
     flex-direction: column;
     min-height: 100vh;
 }
-
+.blur-page {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .blur-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://repository-images.githubusercontent.com/629572204/ea7a6eb4-98a9-4a29-a81c-b8ab3b171a01');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Adjust blur amount */
+    z-index: -1;
+  }
+  
+  
 html {
     transform: scale(0.67); 
     transform-origin: top left;
 }
+.home-div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13rem;
 
+}
+.home-btn{
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    height: 350px;
+    width: 350px;
+    border-radius: 59px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+.home-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly less transparent on hover */
+  }
+  
+.home-btn a{
+    text-decoration: none;
+    color: rgb(203, 202, 202);
+    font-size: 70px;
+}
+.btn-request{
+    background-color: green !important;
+    font-size: 1.6rem !important;
+    width: 230px;
+    height: 50px;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+}
+.btn-request a{
+    text-decoration: none;
+    color: white !important;
+}
 .navbar-brand{
     font-size: 50px !important;
 }
@@ -19,12 +80,42 @@ html {
     margin-left: 15px;
     color: #222222 !important;
 }
-.fa-compass{
-    color: #fe424d;
+.fa-bowl-food,.fa-user{
+    color: black;
+}
+.logout{
+    margin-right: 1rem !important;
+    margin-top: 1rem !important;
 }
 .navbar{
-    background-color: white !important;
+    background-color: #EB8317 !important;
 }
+.search-input{
+    border: #ebebeb !important;
+    border-radius: 3rem !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6) !important; /* Normal shadow */
+    transition: box-shadow 0.3s ease-in-out !important;
+}
+.search-input:focus {
+    outline: none !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7) !important; /* Shadow intensifies on focus */
+  }
+
+.btn-search{
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6) !important; /* Normal shadow */
+    transition: box-shadow 0.3s ease-in-out !important;
+}
+
+.btn-search:focus {
+    outline: none !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7) !important; /* Shadow intensifies on focus */
+  }
+
+.alert-danger{
+    background-color: rgb(242, 139, 139) !important;
+} 
+  
 .f-info-links a{
     text-decoration: none;
     color: #222222;
@@ -37,7 +128,7 @@ html {
     text-align: center;
     height: 14rem;
     display: flex;
-    background-color: #ebebeb;
+    background-color: #EB8317;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: space-evenly;
@@ -116,8 +207,8 @@ fooetr{
     margin-bottom: 1rem;
     border-radius: 10px !important;
     font-size: 25px !important;
-    background-color:  #fe424d !important;
-    border-color: #fe424d !important;
+    background-color:  #EB8317 !important;
+    border-color: #EB8317 !important;
 }
 .form-label{
     font-size: 25px !important;
@@ -147,12 +238,15 @@ fooetr{
 .row-show{
     margin-top: 1rem !important;
 }
+.new-row{
+    margin-top: 4rem !important;
+}
 .flash-msg{
     font-size: 25px !important;
 }
 #map { 
     height: 600px; 
-    width: 100vh;
+    width: 91vh;
 }
 .search-bar{
     margin-left: 17rem !important;
@@ -295,7 +389,7 @@ fooetr{
         text-align: center;
         height: 10rem;
         display: flex;
-        background-color: #ebebeb;
+        background-color: #EB8317;
         flex-wrap: wrap;
         justify-content: center;
         align-items: space-evenly;
@@ -322,5 +416,30 @@ fooetr{
     .btn-search{
         width: 110px !important;
     }
-
+    .home-div{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+    
+    }
+    .home-btn{
+        background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+        height: 250px;
+        width: 250px;
+        border-radius: 59px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .home-btn:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* Slightly less transparent on hover */
+      }
+      
+    .home-btn a{
+        text-decoration: none;
+        color: black;
+        font-size: 45px;
+    }
   }

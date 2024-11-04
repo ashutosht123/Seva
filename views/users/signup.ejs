@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplate") %>
 <div class="row new-row">
      <div class="col-6 offset-3">
-        <h2>Sign up on Wanderlust</h2>
+        <h2>Sign up on Seva</h2>
         <form action="/signup" method="post" class="needs-validation" novalidate>
             <div class="mb-3">
                 <label for="username" class="form-label">UserName</label>
@@ -17,6 +17,12 @@
                  <input type="password" name="password" id="password"  class="form-control" required>
                  <div class="valid-feedback">Looks good!</div>
               </div>
+              <div class="mb-3">
+               <label for="emailPassword" class="form-label">Email App Password (For sending and recieving mail's for food)</label>
+                <input type="password" name="emailPassword" id="emailPassword"  class="form-control" required>
+                <div class="valid-feedback">Looks good!</div>
+                <h4>Don't know what is email app password? <a style="text-decoration: none;" href="https://support.google.com/mail/thread/205453566/how-to-generate-an-app-password?hl=en">Click here</a></h4>
+             </div>
               <button class="btn btn-success offset btn-new-page">Sign Up</button>
         </form>
      </div>

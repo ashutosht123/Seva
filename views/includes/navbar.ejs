@@ -1,19 +1,42 @@
+<style>
+      /* Increase tooltip text size and style */
+      .tooltip-inner {
+          font-size: 1.8em; /* Adjust the font size */
+          /* padding: 10px 15px; Increase padding for a larger tooltip box */
+          color: #ffffff; /* Set text color to white */
+          background-color: #007bff; /* Bootstrap primary color for the tooltip */
+          border-radius: 5px; /* Add rounded corners */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+      }
+
+      /* Style the tooltip arrow */
+      .tooltip-arrow {
+          border-top-color: #007bff; /* Match the arrow color with the tooltip */
+      }
+    </style>
+<script>
+  // Initialize tooltips
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top py-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+      <a class="navbar-brand" href="/listings"><i class="fa-solid fa-bowl-food"></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" href="/listings">Home</a>
-          <a class="nav-link" href="/listings">All Listings</a>
-          <a class="nav-link" href="/listings/new">Add New Listings</a>
+          <a class="nav-link" href="/listings/home">Home</a>
+          <a class="nav-link" href="/listings">Available Food</a>
+          <a class="nav-link" href="/listings/new">Donate Food</a>
         </div>
         <div class="navbar-nav search-bar">
           <form class="d-flex needs-validation" role="search" action="/listings/results" method="GET" novalidate >
-            <input style="height: 50px; width: 500px" class="form-control me-2 search-input" type="text" id="searchInput" name="title" placeholder="Search Destinations" aria-label="Search" required>
-            <button onclick="performSearch()" class="btn btn-search ms-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+            <input style="height: 50px; width: 500px" class="form-control me-2 search-input" type="text" id="searchInput" name="title" placeholder="Search Food Here" aria-label="Search" required>
+            <button style="border-radius: 3rem !important;" onclick="performSearch()" class="btn btn-search ms-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
           </form>
           <div class="invalid-feedback">Price should be valid</div>
         </div>
@@ -23,7 +46,8 @@
           <a class="nav-link" href="/login">Log In</a>
           <% } %>
           <% if(currUser) { %>
-          <a class="nav-link" href="/logout">Log out</a>
+          <a class="nav-link logout" href="/logout">Log out</a>
+          <a href="" class="navbar-brand" data-toggle="tooltip" title="Current User: <%= currUser ? currUser.username : 'Guest' %>" ><i class="fa-solid fa-user"></i></a>
           <% } %>
         </div>
       </div>

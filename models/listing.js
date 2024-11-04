@@ -1,7 +1,8 @@
 const mongoose=require("mongoose");
 // const { listingSchema } = require("../schema");
 const Schema=mongoose.Schema;
-const Review=require("./review.js")
+const Review=require("./review.js");
+const { string } = require("joi");
 
 const listingSchema=new Schema({
     title:{
@@ -30,13 +31,20 @@ const listingSchema=new Schema({
         type: {
           type: String, // Don't do `{ location: { type: String } }`
           enum: ['Point'], // 'location.type' must be 'Point'
-          required: true
+        //   required: true
         },
         coordinates: {
           type: [Number],
-          required: true
+        //   required: true
         }
-      }
+      },
+      category: {
+        type: String,
+
+    },
+    contact:{
+        type:Number,
+    }
 
 })
 

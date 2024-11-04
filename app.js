@@ -26,7 +26,7 @@ const LocalStretegy=require("passport-local")
 const User=require("./models/user.js")
 
 
-// const MONGO_URL="mongodb://127.0.0.1:27017/mainProject";
+// const MONGO_URL="mongodb://127.0.0.1:27017/sevaProjectDb";
 const dburl=process.env.ATLASDB_URL
 
 async function main() {
@@ -39,6 +39,10 @@ main().then(()=>{
     console.log(err);
 })
 
+app.get("/", (req, res) => {
+  res.redirect("/listings/home");
+});
+
 app.set("view engine","ejs");
 app.set('views',path.join(__dirname,'views'));
 app.use(express.urlencoded({extended:true}));
@@ -46,9 +50,7 @@ app.use(methodOverride("_method"))
 app.engine('ejs', ejsMate);
 app.use(express.static(path.join(__dirname,"/public")))
 
-app.get("/", (req, res) => {
-  res.redirect("https://wanderlust-6o6k.onrender.com/listings");
-});
+
 
 // app.get("/",(req,res)=>{
 //       res.send("hii, im root");
@@ -106,6 +108,6 @@ app.use((err,req,res,next)=>{
     let {statuscode=500,message="Something went wrong"}=err
     res.render("error.ejs",{message})
 })
-app.listen(8000,()=>{
-    console.log("server is listing on port 8000")
+app.listen(7000,()=>{
+    console.log("server is listing on port 7000")
 })
