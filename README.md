@@ -1,12 +1,15 @@
 # Seva
 Seva is a web app connecting food donors with recipients. Donors list extra food, and recipients can request items based on their needs. A search feature aids quick filtering, and the project is built with MVC architecture, deployed on Render.com.. https://seva-eb3t.onrender.com
 
-![Screenshot 2024-08-10 113206](https://github.com/user-attachments/assets/a15b5fd0-6307-42bf-b5f1-4785397304b6)
+![Screenshot 2024-11-04 214428](https://github.com/user-attachments/assets/00f739c9-d05a-4231-a472-58e9202a0235)
+![Screenshot 2024-11-04 214454](https://github.com/user-attachments/assets/0f2707f1-533e-49ab-b76a-ee25d17cc81d)
+
 
 ## Note: 
-1.While adding new listing add location only in this format, eg. Location : "Goa, India"
+1.While donating a food add your location only in this format, eg. Location : "Goa, India"
 
-![Screenshot 2024-08-10 113328](https://github.com/user-attachments/assets/9b17bf8f-ca00-4ace-ba31-85027bb0ef33)
+![Screenshot 2024-11-04 214531](https://github.com/user-attachments/assets/418a5c53-1e52-4ac2-81ad-5362b897162d)
+
 ## Description
 The Seva project is a web platform designed to simplify food donation and distribution. Users can list surplus food they wish to donate, while those in need can browse available listings and make requests based on specific needs. A search feature helps users find food items quickly by type or requirement. Built with MVC architecture for organized code structure, Seva is deployed on Render.com for easy online access.
 ## Features
