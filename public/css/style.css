@@ -27,10 +27,10 @@ body{
   }
   
   
-html {
+/* html {
     transform: scale(0.67); 
-/*     transform-origin: top left; */
-}
+    transform-origin: top left;
+} */
 .home-div{
     display: flex;
     flex-wrap: wrap;
