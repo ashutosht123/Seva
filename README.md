@@ -31,7 +31,7 @@ The Seva project is a web platform designed to simplify food donation and distri
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/ashutosht123/Wanderlust.git
+    git clone https://github.com/ashutosht123/Seva.git
     cd Seva
     ```
 
